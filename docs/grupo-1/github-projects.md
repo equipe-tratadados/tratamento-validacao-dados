@@ -230,7 +230,6 @@ Campos recomendados:
 | Sprint | Sprint 01 |
 | Entrega esperada | Lista de fontes oficiais com links, período disponível e limitações |
 | Grupo destino | Interno G1 |
-```
 
 ## Regra final
 
