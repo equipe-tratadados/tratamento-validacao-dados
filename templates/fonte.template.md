@@ -1,57 +1,85 @@
-# Fonte de Dados — [Nome da Fonte]
+# Fonte de Dados
 
-## 1. Identificação
+## Nome da fonte
 
-| Campo | Informação |
-|---|---|
-| Fonte ID |  |
-| Tema |  |
-| Nome do dataset |  |
-| Entidade responsável |  |
-| Origem / portal |  |
-| URL |  |
-| Data de acesso |  |
-| Período coberto |  |
-| Cobertura geográfica |  |
-| Formato original |  |
-| Licença de uso |  |
-| Responsável pela coleta |  |
+```txt
+Nome oficial ou mais claro da fonte
+```
 
-## 2. Descrição
+## Fonte ID
 
-Descrever brevemente o que a fonte contém.
+```txt
+FONTE-000
+```
 
-## 3. Utilidade para o Projeto
+## Instituição
 
-Explicar por que esta fonte é relevante para o tema escolhido e como ela pode apoiar dashboard, análise ou conteúdo.
+```txt
+Nome da instituição responsável
+```
 
-## 4. Campos Relevantes
+## Link
 
-| Campo original | Descrição | Uso previsto |
-|---|---|---|
-|  |  |  |
+```txt
+URL da fonte
+```
 
-## 5. Limitações
+## Tema
 
-- [ ] Dados incompletos
-- [ ] Dados desatualizados
-- [ ] Baixa granularidade
-- [ ] Licença pouco clara
-- [ ] Formato difícil de extrair
-- [ ] Outra limitação: 
+```txt
+Exemplo: Inflação, habitação, salários, custo de vida
+```
 
-## 6. Status de Validação
+## Tipo de dado
 
-- [ ] Fonte encontrada
-- [ ] Fonte acessível
-- [ ] Licença ou condição de uso verificada
-- [ ] Período coberto identificado
-- [ ] Cobertura geográfica identificada
-- [ ] Dados baixados ou consultados
-- [ ] CSV organizado
-- [ ] Campos documentados
-- [ ] Validado pelo líder
+Marcar uma opção:
 
-## 7. Observações
+```txt
+[ ] CSV
+[ ] Excel
+[ ] API
+[ ] PDF
+[ ] Página web
+[ ] Base estatística
+[ ] Outro: ______
+```
 
-Registrar decisões, problemas ou pontos de atenção.
+## Período disponível
+
+```txt
+Exemplo: 2015-2024
+```
+
+## Data de acesso
+
+```txt
+AAAA-MM-DD
+```
+
+## Confiabilidade
+
+Marcar uma opção:
+
+```txt
+[ ] Alta
+[ ] Média
+[ ] Baixa
+```
+
+## Critério usado para confiabilidade
+
+```txt
+Descrever rapidamente por que a fonte foi classificada assim.
+```
+
+## Limitações
+
+```txt
+Descrever limitações, lacunas, formatos ruins, ausência de metodologia ou pontos de cautela.
+```
+
+## Observações
+
+```txt
+Notas adicionais.
+```

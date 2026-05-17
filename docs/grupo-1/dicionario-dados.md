@@ -1,68 +1,72 @@
-# Dicionário de Dados — Grupo 1
+# Dicionário de Dados
 
-## 1. Objetivo
+## Objetivo
 
-O dicionário de dados documenta os campos presentes nos CSVs produzidos pelo Grupo 1.
+O dicionário de dados documenta as colunas dos datasets usados e produzidos pelo Grupo 1.
 
-Ele permite que os Grupos 2 e 3 entendam o significado, tipo e limitações de cada coluna antes de usar os dados em dashboards, textos ou análises.
+Ele permite que os Grupos 2 e 3 entendam o significado, tipo, unidade e limitações de cada campo sem depender de explicações informais.
 
-## 2. Arquivo Principal
+## Arquivo principal
 
-O dicionário deve ser mantido no arquivo:
+O dicionário em CSV fica em:
 
 ```txt
-/metadata/dicionario_dados.csv
+metadata/dicionario_dados.csv
 ```
 
-## 3. Campos Mínimos
+## Campos obrigatórios
+
+| Campo | Descrição |
+| --- | --- |
+| `dataset_id` | ID do dataset. Exemplo: `DATASET-001`. |
+| `arquivo` | Nome do arquivo CSV relacionado. |
+| `coluna` | Nome da coluna. |
+| `tipo_dado` | Tipo do dado: texto, inteiro, decimal, data, booleano etc. |
+| `descricao` | Descrição objetiva da coluna. |
+| `unidade` | Unidade de medida, quando aplicável. |
+| `obrigatorio` | Sim ou Não. |
+| `exemplo` | Exemplo de valor. |
+| `observacoes` | Notas, limitações ou regras específicas. |
+
+## Como documentar colunas
+
+Para cada CSV validado:
+
+1. criar ou identificar o `dataset_id`;
+2. registrar o nome do arquivo;
+3. listar cada coluna do CSV;
+4. definir o tipo do dado;
+5. escrever uma descrição curta;
+6. informar unidade, quando aplicável;
+7. marcar se a coluna é obrigatória;
+8. adicionar exemplo de valor;
+9. registrar observações relevantes.
+
+## Exemplo de preenchimento
 
 ```csv
-dataset,campo,tipo_dado,descricao,obrigatorio,exemplo,observacoes
+dataset_id;arquivo;coluna;tipo_dado;descricao;unidade;obrigatorio;exemplo;observacoes
+DATASET-001;inflacao_ine_2020_2024_validated.csv;ano;inteiro;Ano de referência do indicador;ano;Sim;2024;Exemplo de preenchimento
 ```
 
-## 4. Dicionário dos Campos
+## Campos mínimos recomendados para datasets
 
-| Campo | Obrigatório | Descrição | Exemplo |
-|---|---:|---|---|
-| `dataset` | Sim | Nome do CSV ao qual o campo pertence | `habitacao_ine_2020_2024_processed.csv` |
-| `campo` | Sim | Nome da coluna documentada | `valor` |
-| `tipo_dado` | Sim | Tipo esperado do dado | `integer`, `decimal`, `string`, `date` |
-| `descricao` | Sim | Explicação objetiva do campo | `Valor observado do indicador` |
-| `obrigatorio` | Sim | Indica se o campo deve existir no dataset | `sim` / `nao` |
-| `exemplo` | Sim | Exemplo de valor válido | `235000` |
-| `observacoes` | Não | Regras, limitações ou notas | `Valor em euros` |
+| Campo | Descrição |
+| --- | --- |
+| `id_registro` | Identificador único da linha. |
+| `fonte_id` | ID da fonte no catálogo. |
+| `ano` | Ano de referência. |
+| `periodo` | Período de referência. |
+| `pais` | País. |
+| `regiao` | Região. |
+| `municipio` | Município. |
+| `indicador` | Indicador analisado. |
+| `valor` | Valor observado. |
+| `unidade` | Unidade de medida. |
+| `categoria` | Categoria principal. |
+| `subcategoria` | Subcategoria. |
+| `data_atualizacao` | Data de acesso ou atualização. |
 
-## 5. Tipos de Dados Permitidos
+## Regra de validação
 
-| Tipo | Uso |
-|---|---|
-| `string` | Texto livre ou categoria |
-| `integer` | Número inteiro |
-| `decimal` | Número decimal |
-| `date` | Data no formato `YYYY-MM-DD` |
-| `boolean` | Verdadeiro/falso |
-| `category` | Valor pertencente a lista fechada |
-
-## 6. Exemplo
-
-```csv
-habitacao_ine_2020_2024_processed.csv;valor;decimal;Valor observado do indicador;sim;235000;Valor monetário em EUR
-```
-
-## 7. Regras
-
-- Todo CSV `processed` ou `validated` deve ter seus campos documentados.
-- Nomes de campos devem estar em `snake_case`.
-- Campos com abreviações devem ser explicados.
-- Campos calculados devem indicar a lógica de cálculo em `observacoes`.
-- Campos herdados da fonte original podem ser mantidos, mas precisam de descrição.
-
-## 8. Critério de Aceite
-
-Um dicionário de dados é considerado suficiente quando:
-
-- todos os campos do CSV estão listados;
-- cada campo possui tipo definido;
-- cada campo possui descrição compreensível;
-- exemplos são compatíveis com os dados reais;
-- campos obrigatórios estão identificados.
+Um CSV em `data/validated/` só deve ser considerado pronto se as colunas principais estiverem documentadas no dicionário de dados.

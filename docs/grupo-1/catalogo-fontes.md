@@ -1,74 +1,71 @@
-# Catálogo de Fontes — Grupo 1
+# Catálogo de Fontes
 
-## 1. Objetivo
+## Objetivo
 
-O catálogo de fontes registra a origem, a confiabilidade, a cobertura e o estado de validação das fontes usadas pelo Grupo 1.
+O catálogo de fontes registra todas as fontes públicas usadas pelo Grupo 1.
 
-Nenhum CSV deve ser considerado validado sem uma fonte registrada neste catálogo.
+Ele serve para garantir rastreabilidade, confiabilidade e reutilização das fontes pelos outros grupos.
 
-## 2. Arquivo Principal
+## Arquivo principal
 
-O catálogo deve ser mantido no arquivo:
+O catálogo em CSV fica em:
 
 ```txt
-/metadata/catalogo_fontes.csv
+metadata/catalogo_fontes.csv
 ```
 
-## 3. Campos Mínimos
+## Campos obrigatórios
+
+| Campo | Descrição |
+| --- | --- |
+| `fonte_id` | ID único da fonte. Exemplo: `FONTE-001`. |
+| `nome_fonte` | Nome claro da fonte. |
+| `instituicao` | Instituição responsável pelo dado. |
+| `url` | Link direto ou página oficial da fonte. |
+| `tema` | Tema relacionado ao dado. |
+| `pais` | País de referência. |
+| `periodo_disponivel` | Período disponível na fonte. |
+| `data_acesso` | Data em que a fonte foi consultada. |
+| `tipo_fonte` | API, CSV, Excel, PDF, página web, base estatística etc. |
+| `confiabilidade` | Alta, média ou baixa. |
+| `observacoes` | Limitações, notas ou cuidados. |
+
+## Como registrar uma nova fonte
+
+1. Verificar se a fonte já existe em `metadata/catalogo_fontes.csv`.
+2. Criar novo `fonte_id`, seguindo a sequência existente.
+3. Registrar nome, instituição, URL, tema e período disponível.
+4. Informar data de acesso.
+5. Classificar confiabilidade.
+6. Indicar limitações ou observações.
+7. Usar o `fonte_id` nos datasets relacionados.
+
+## Critérios de confiabilidade
+
+| Classificação | Critério |
+| --- | --- |
+| Alta | Fonte oficial, institucional, pública e com metodologia clara. |
+| Média | Fonte secundária confiável, mas dependente de interpretação ou agregação. |
+| Baixa | Fonte não oficial, incompleta, sem metodologia clara ou difícil de verificar. |
+
+## Fontes preferenciais
+
+Priorizar fontes oficiais e públicas, como:
+
+- INE;
+- PORDATA;
+- Eurostat;
+- Banco de Portugal;
+- Direção-Geral competente pelo tema;
+- portais públicos de dados abertos.
+
+## Exemplo de registo
 
 ```csv
-fonte_id,tema,nome_dataset,origem,entidade_responsavel,url_fonte,data_acesso,periodo_coberto,cobertura_geografica,formato_original,licenca_uso,status_validacao,responsavel_coleta,observacoes
+fonte_id;nome_fonte;instituicao;url;tema;pais;periodo_disponivel;data_acesso;tipo_fonte;confiabilidade;observacoes
+FONTE-001;Índice de Preços no Consumidor;INE;https://www.ine.pt;Inflação;Portugal;2020-2024;2026-05-17;Base estatística;Alta;Exemplo de preenchimento
 ```
 
-## 4. Dicionário dos Campos
+## Relação com os datasets
 
-| Campo | Obrigatório | Descrição | Exemplo |
-|---|---:|---|---|
-| `fonte_id` | Sim | Identificador único da fonte | `FONTE_001` |
-| `tema` | Sim | Tema ao qual a fonte está associada | `habitacao` |
-| `nome_dataset` | Sim | Nome do dataset ou tabela | `Índice de preços da habitação` |
-| `origem` | Sim | Plataforma, portal ou base consultada | `INE` |
-| `entidade_responsavel` | Sim | Instituição responsável pelo dado | `Instituto Nacional de Estatística` |
-| `url_fonte` | Sim | Link direto ou página de acesso | `https://...` |
-| `data_acesso` | Sim | Data em que a fonte foi consultada | `2026-05-17` |
-| `periodo_coberto` | Sim | Intervalo temporal dos dados | `2015-2024` |
-| `cobertura_geografica` | Sim | País, região, distrito ou município | `Portugal` |
-| `formato_original` | Sim | Formato em que o dado foi encontrado | `CSV`, `XLSX`, `API`, `HTML` |
-| `licenca_uso` | Sim | Condição de uso ou licença declarada | `Dados públicos` |
-| `status_validacao` | Sim | Estado atual da fonte | `encontrada`, `em_validacao`, `validada`, `rejeitada` |
-| `responsavel_coleta` | Sim | Pessoa que encontrou ou coletou a fonte | `Nome` |
-| `observacoes` | Não | Limitações, notas ou decisões | `Sem granularidade municipal` |
-
-## 5. Status de Validação da Fonte
-
-| Status | Significado |
-|---|---|
-| `encontrada` | Fonte identificada, mas ainda não analisada |
-| `em_validacao` | Fonte em análise técnica |
-| `validada` | Fonte aprovada para uso no projeto |
-| `rejeitada` | Fonte descartada com justificativa |
-
-## 6. Critérios de Validação
-
-Uma fonte pode ser validada quando:
-
-- possui entidade responsável identificável;
-- possui URL acessível;
-- tem período coberto claro;
-- tem cobertura geográfica compatível com o projeto;
-- permite extração ou consulta dos dados;
-- tem licença ou condição de uso minimamente verificável;
-- não apresenta limitações críticas para a análise proposta.
-
-## 7. Exemplo de Registro
-
-```csv
-FONTE_001;habitacao;Índice de preços da habitação;INE;Instituto Nacional de Estatística;https://www.ine.pt;2026-05-17;2015-2024;Portugal;CSV;Dados públicos;em_validacao;Lucas;Fonte útil para análise nacional
-```
-
-## 8. Regras
-
-- Cada fonte deve possuir um `fonte_id` único.
-- Uma fonte rejeitada não deve ser apagada; deve permanecer registrada com justificativa.
-- O `fonte_id` deve aparecer nos CSVs derivados da fonte.
-- Sempre que uma fonte for atualizada, registrar a nova data de acesso.
+Todo arquivo em `data/raw/`, `data/processed/` ou `data/validated/` deve poder ser ligado a uma linha do catálogo de fontes.
