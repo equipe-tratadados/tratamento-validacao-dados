@@ -1,58 +1,83 @@
-# Dataset — [Nome do CSV]
+# README do Dataset
 
-## 1. Identificação
+## Nome do dataset
 
-| Campo | Informação |
-|---|---|
-| Nome do arquivo |  |
-| Pasta | `/data/raw`, `/data/processed` ou `/data/validated` |
-| Fonte ID |  |
-| Tema |  |
-| Responsável |  |
-| Data de criação |  |
-| Última atualização |  |
-| Status | `raw`, `processed` ou `validated` |
+```txt
+Nome claro do dataset
+```
 
-## 2. Descrição
+## ID do dataset
 
-Descrever o conteúdo do dataset e sua utilidade para o projeto.
+```txt
+DATASET-000
+```
 
-## 3. Origem
+## Task associada
 
-- Entidade responsável:
-- URL da fonte:
-- Período coberto:
-- Cobertura geográfica:
-- Formato original:
+```txt
+[G1-000]
+```
 
-## 4. Transformações Realizadas
+## Fonte
 
-Aplicável principalmente a arquivos `processed` e `validated`.
+| Campo | Valor |
+| --- | --- |
+| Fonte ID | `FONTE-000` |
+| Nome da fonte |  |
+| Instituição |  |
+| Link |  |
+| Data de acesso |  |
 
-| Transformação | Descrição | Responsável |
-|---|---|---|
-|  |  |  |
+## Período dos dados
 
-## 5. Campos Principais
+```txt
+Exemplo: 2020-2024
+```
 
-| Campo | Tipo | Descrição |
-|---|---|---|
-|  |  |  |
+## Pasta
 
-## 6. Limitações
+Marcar uma opção:
 
-- 
+```txt
+[ ] data/raw/
+[ ] data/processed/
+[ ] data/validated/
+```
 
-## 7. Critério de Uso
+## Arquivos
 
-Indicar se o dataset pode ser usado por:
+```txt
+- nome_do_arquivo_raw.csv
+- nome_do_arquivo_processed.csv
+- nome_do_arquivo_validated.csv
+```
 
-- [ ] Grupo 2 — Dashboard
-- [ ] Grupo 3 — Conteúdo / Texto
-- [ ] Apenas validação interna
+## Colunas principais
 
-## 8. Histórico de Alterações
+| Coluna | Descrição | Unidade | Observações |
+| --- | --- | --- | --- |
+|  |  |  |  |
 
-| Data | Alteração | Responsável |
-|---|---|---|
-|  |  |  |
+## Transformações realizadas
+
+```txt
+Descrever filtros, renomeações, normalizações, remoções ou agregações.
+```
+
+## Limitações
+
+```txt
+Descrever limitações conhecidas do dataset.
+```
+
+## Responsável
+
+```txt
+@usuario
+```
+
+## PR associado
+
+```txt
+Link do Pull Request
+```

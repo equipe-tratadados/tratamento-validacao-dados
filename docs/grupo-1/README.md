@@ -1,78 +1,43 @@
-# Grupo 1 — Coleta, Organização e Validação de Dados
+# Documentação do Grupo 1
 
-## 1. Objetivo do Grupo
+Este diretório reúne a documentação operacional do Grupo 1 — Tratamento e Validação de Dados.
 
-O Grupo 1 é responsável por preparar a base de dados do projeto, garantindo que as fontes públicas sejam identificadas, documentadas, organizadas, versionadas e entregues em formato reutilizável pelos Grupos 2 e 3.
+## Índice
 
-## 2. Responsabilidades
+| Documento | Finalidade |
+| --- | --- |
+| [processo-interno.md](processo-interno.md) | Fluxo de trabalho, papéis, GitHub Projects, branches, commits, PRs, prioridades e Definition of Done. |
+| [padrao-csv.md](padrao-csv.md) | Regras para organização, nomeação, encoding e validação de arquivos CSV. |
+| [catalogo-fontes.md](catalogo-fontes.md) | Como registrar fontes públicas e avaliar confiabilidade. |
+| [dicionario-dados.md](dicionario-dados.md) | Como documentar colunas, tipos, unidades e observações dos datasets. |
+| [checklist-validacao.md](checklist-validacao.md) | Checklist mínimo antes de concluir uma entrega. |
 
-O Grupo 1 atua nas seguintes frentes:
+## Regra central
 
-- identificar fontes públicas de dados compatíveis com o tema definido;
-- verificar origem, entidade responsável, período coberto, licença e limitações da fonte;
-- organizar os dados em arquivos CSV versionados no GitHub;
-- documentar o catálogo de fontes;
-- criar ou atualizar o dicionário de dados;
-- validar estrutura mínima dos datasets;
-- entregar arquivos utilizáveis pelo Grupo 2 para dashboard;
-- fornecer contexto técnico para o Grupo 3 produzir textos e análises.
+Toda atividade relevante deve ter um ID único de task.
 
-## 3. Status Atual
-
-O grupo está em fase de alinhamento operacional interno.
-
-Antes da execução técnica definitiva, serão formalizados:
-
-- disponibilidade dos membros;
-- prazo padrão de resposta;
-- formato padrão de entrega;
-- fluxo de bloqueios;
-- processo de validação interna;
-- estrutura mínima de versionamento dos CSVs.
-
-## 4. Fluxo de Trabalho
-
-1. O líder recebe a solicitação no grupo de líderes.
-2. O líder traduz a solicitação em tarefa objetiva para o Grupo 1.
-3. Os membros confirmam recebimento dentro do prazo definido.
-4. A execução ocorre dentro do prazo acordado.
-5. A entrega é enviada com status, link/arquivo e bloqueios, se houver.
-6. O líder valida e consolida a entrega.
-7. O resultado é reportado ao grupo de líderes.
-8. A entrega é registrada em ata, Notion ou GitHub Project.
-
-## 5. Formato Padrão de Resposta
+Exemplo:
 
 ```txt
-@Nome — Status: [recebido / em andamento / bloqueado / entregue].
-Prazo: [data/hora].
-Formato de entrega: [link / print / arquivo / comentário].
-Bloqueio: [se houver].
+[G1-001] Coletar dados de inflação no INE
 ```
 
-## 6. Ferramentas
+Esse ID deve aparecer no card do GitHub Projects, na branch, no commit, no Pull Request e na entrega documentada.
 
-| Ferramenta | Uso |
-|---|---|
-| GitHub | Versionamento dos CSVs, documentação técnica e histórico de alterações |
-| GitHub Projects | Tarefas, responsáveis, prioridades e status |
-| Notion | Gestão, atas, decisões e acompanhamento executivo |
-| WhatsApp | Comunicação rápida e confirmações |
-| Daily | Alinhamento entre líderes, bloqueios e decisões |
+## Fluxo do Grupo 1
 
-## 7. Entregáveis Principais
+```txt
+fonte pública → data/raw → data/processed → data/validated → entrega para Grupo 2/Grupo 3
+```
 
-| Entregável | Descrição | Destino |
-|---|---|---|
-| CSV raw | Dado original ou minimamente alterado | GitHub |
-| CSV processed | Dado tratado e padronizado | GitHub |
-| CSV validated | Dado validado para uso por dashboard/texto | GitHub |
-| Catálogo de fontes | Registro das fontes usadas | GitHub / Notion |
-| Dicionário de dados | Explicação dos campos dos datasets | GitHub |
-| Checklist de validação | Evidência mínima de qualidade | GitHub / Notion |
+## Onde registrar informação
 
-## 8. Regra de Bloqueio
-
-Qualquer bloqueio deve ser comunicado antes do prazo final.
-
-Silêncio não será considerado confirmação, entrega ou justificativa.
+| Informação | Local correto |
+| --- | --- |
+| Dados brutos | `data/raw/` |
+| Dados tratados | `data/processed/` |
+| Dados validados | `data/validated/` |
+| Fontes | `metadata/catalogo_fontes.csv` |
+| Dicionário de dados | `metadata/dicionario_dados.csv` |
+| Entrega final | `reports/entregas/` |
+| Regras do processo | `docs/grupo-1/` |

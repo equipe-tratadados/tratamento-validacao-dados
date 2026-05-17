@@ -1,46 +1,79 @@
-# Entrega Grupo 1 — [Data]
+# Entrega do Grupo 1
 
-## 1. Identificação
+## Task finalizada
 
-| Campo | Informação |
-|---|---|
-| Responsável |  |
-| Prazo acordado |  |
-| Data da entrega |  |
-| Status | `em andamento`, `bloqueado`, `entregue`, `validado` |
-| Link da entrega |  |
+```txt
+[G1-000] Título da task
+```
 
-## 2. Resumo da Entrega
+## Responsável
 
-Descrever de forma objetiva o que foi entregue.
+```txt
+@usuario
+```
 
-## 3. Arquivos Entregues
+## O que foi entregue
 
-| Arquivo | Tipo | Pasta | Status |
-|---|---|---|---|
-|  | `raw` / `processed` / `validated` |  |  |
+```txt
+Descrever objetivamente a entrega realizada.
+```
 
-## 4. Fontes Documentadas
+## Fonte usada
 
-| Fonte ID | Entidade | URL | Status |
-|---|---|---|---|
-|  |  |  |  |
+| Campo | Valor |
+| --- | --- |
+| Fonte ID | `FONTE-000` |
+| Nome da fonte |  |
+| Instituição |  |
+| Link |  |
+| Data de acesso |  |
+| Período dos dados |  |
 
-## 5. Validação
+## Arquivos criados ou alterados
 
-| Critério | Status |
-|---|---|
-| Fonte registrada no catálogo | [ ] |
-| CSV segue padrão de nome | [ ] |
-| CSV está na pasta correta | [ ] |
-| Dicionário de dados atualizado | [ ] |
-| Limitações registradas | [ ] |
-| Entrega pronta para repasse | [ ] |
+```txt
+- data/raw/...
+- data/processed/...
+- data/validated/...
+- metadata/catalogo_fontes.csv
+- metadata/dicionario_dados.csv
+```
 
-## 6. Bloqueios
+## Validação feita
 
-Registrar bloqueios existentes ou informar `Sem bloqueios`.
+- [ ] Fonte registrada.
+- [ ] CSV em UTF-8.
+- [ ] Separador `;`.
+- [ ] Arquivo salvo na pasta correta.
+- [ ] Dicionário atualizado, quando aplicável.
+- [ ] Checklist preenchido, quando aplicável.
 
-## 7. Próximo Passo
+## Limitações
 
-Indicar a próxima ação necessária.
+```txt
+Descrever limitações, lacunas ou pontos que precisam de atenção.
+```
+
+## Branch
+
+```txt
+g1-000/descricao-curta-da-tarefa
+```
+
+## Commit principal
+
+```txt
+tipo(escopo): descrição curta [G1-000]
+```
+
+## Pull Request
+
+```txt
+Link do Pull Request
+```
+
+## Uso pelos outros grupos
+
+```txt
+Descrever como o Grupo 2 e/ou Grupo 3 pode usar esta entrega.
+```

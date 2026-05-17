@@ -1,135 +1,132 @@
-# Padrão Inicial de CSVs Versionados
+# Padrão de CSV
 
-## 1. Objetivo
+## Objetivo
 
-Garantir que todos os arquivos CSV do Grupo 1 tenham estrutura previsível, rastreável e reutilizável pelos Grupos 2 e 3.
+Definir o padrão mínimo para arquivos CSV produzidos pelo Grupo 1.
 
-Este padrão permite:
+O objetivo é garantir que os dados possam ser usados pelos Grupos 2 e 3 sem retrabalho básico de encoding, separador, nomeação, fonte ou dicionário de dados.
 
-- rastrear a origem dos dados;
-- diferenciar dados brutos, tratados e validados;
-- reduzir retrabalho entre grupos;
-- facilitar o uso dos arquivos em dashboards, análises e textos;
-- manter histórico de alterações no GitHub.
+## Estrutura das pastas de dados
 
-## 2. Estrutura Recomendada de Pastas
+| Pasta | Uso |
+| --- | --- |
+| `data/raw/` | Dados originais ou minimamente alterados. |
+| `data/processed/` | Dados tratados, limpos e padronizados. |
+| `data/validated/` | Dados revisados e prontos para uso pelo Grupo 2 e Grupo 3. |
+
+## Fluxo obrigatório
 
 ```txt
-/data
-  /raw
-    .gitkeep
-  /processed
-    .gitkeep
-  /validated
-    .gitkeep
-
-/metadata
-  catalogo_fontes.csv
-  dicionario_dados.csv
-
-/docs
-  /grupo-1
-    padrao-csv.md
-    catalogo-fontes.md
-    dicionario-dados.md
-    checklist-validacao.md
+fonte pública → data/raw → data/processed → data/validated
 ```
 
-## 3. Camadas dos Dados
+## Encoding
 
-| Camada | Pasta | Descrição |
-|---|---|---|
-| Raw | `/data/raw` | Arquivo original ou minimamente alterado |
-| Processed | `/data/processed` | Arquivo tratado, limpo ou padronizado |
-| Validated | `/data/validated` | Arquivo validado para uso pelo dashboard/texto |
+Todos os CSVs devem usar:
 
-## 4. Padrão de Nome dos Arquivos
+```txt
+UTF-8
+```
+
+## Separador
+
+Todos os CSVs devem usar ponto e vírgula:
+
+```txt
+;
+```
+
+## Nome de arquivo
+
+Usar `snake_case` ou `kebab-case`. Não usar espaços, acentos ou caracteres especiais.
+
+Formato recomendado:
 
 ```txt
 tema_fonte_periodo_status.csv
 ```
 
-### 4.1 Componentes do Nome
-
-| Campo | Descrição | Exemplo |
-|---|---|---|
-| `tema` | Tema principal do dataset | `habitacao` |
-| `fonte` | Entidade ou base de origem | `ine`, `pordata`, `eurostat` |
-| `periodo` | Ano ou intervalo coberto | `2020_2024` |
-| `status` | Estado do arquivo | `raw`, `processed`, `validated` |
-
-### 4.2 Exemplos
-
-```txt
-habitacao_ine_2020_2024_raw.csv
-habitacao_ine_2020_2024_processed.csv
-habitacao_pordata_2015_2023_validated.csv
-```
-
-## 5. Status Permitidos
+Status permitidos:
 
 | Status | Uso |
-|---|---|
-| `raw` | Arquivo original ou minimamente alterado |
-| `processed` | Arquivo tratado, limpo, renomeado ou normalizado |
-| `validated` | Arquivo validado para uso por dashboard ou texto |
+| --- | --- |
+| `raw` | Arquivo bruto ou minimamente alterado. |
+| `processed` | Arquivo tratado e padronizado. |
+| `validated` | Arquivo validado e pronto para uso. |
 
-## 6. Campos Mínimos Recomendados nos CSVs de Dados
+## Exemplos corretos
 
-```csv
-id_registro,fonte_id,ano,periodo,pais,regiao,municipio,indicador,valor,unidade,categoria,subcategoria,data_atualizacao
+```txt
+inflacao_ine_2020_2024_raw.csv
+inflacao_ine_2020_2024_processed.csv
+inflacao_ine_2020_2024_validated.csv
+salarios_pordata_2015_2023_raw.csv
+habitacao_ine_2011_2024_validated.csv
 ```
 
-## 7. Descrição dos Campos Mínimos
+## Exemplos incorretos
 
-| Campo | Obrigatório | Descrição | Exemplo |
-|---|---:|---|---|
-| `id_registro` | Sim | Identificador único da linha | `hab_ine_000001` |
-| `fonte_id` | Sim | Chave da fonte registrada no catálogo | `FONTE_001` |
-| `ano` | Sim, se aplicável | Ano de referência do dado | `2024` |
-| `periodo` | Sim | Período coberto pelo registro | `2020-2024`, `T1-2024` |
-| `pais` | Sim | País do dado | `Portugal` |
-| `regiao` | Não | Região, distrito, NUTS ou equivalente | `Norte` |
-| `municipio` | Não | Município, se existir granularidade local | `Porto` |
-| `indicador` | Sim | Nome do indicador medido | `preco_medio_habitacao` |
-| `valor` | Sim | Valor observado | `235000` |
-| `unidade` | Sim | Unidade de medida | `EUR`, `%`, `habitantes` |
-| `categoria` | Não | Categoria analítica principal | `mercado_imobiliario` |
-| `subcategoria` | Não | Recorte secundário | `compra` |
-| `data_atualizacao` | Não | Data em que o registro foi atualizado | `2026-05-17` |
+```txt
+Dados finais.csv
+inflação INE.xlsx
+base nova final 2.csv
+arquivo_teste.csv
+```
 
-## 8. Regras de Versionamento
+## Campos mínimos recomendados
 
-- Não substituir arquivos sem histórico.
-- Não alterar CSV validado sem registrar o motivo.
-- Toda fonte deve estar documentada no catálogo de fontes.
-- Todo CSV deve possuir um `fonte_id` correspondente.
-- Arquivos `raw` devem preservar ao máximo a estrutura original.
-- Arquivos `processed` devem registrar alterações relevantes.
-- Arquivos `validated` devem estar prontos para uso pelos Grupos 2 e 3.
+Sempre que fizer sentido para o dataset, usar os seguintes campos:
 
-## 9. Regras de Formatação
+| Campo | Descrição |
+| --- | --- |
+| `id_registro` | Identificador único da linha. |
+| `fonte_id` | ID da fonte registrada no catálogo de fontes. |
+| `ano` | Ano de referência. |
+| `periodo` | Período de referência, quando aplicável. |
+| `pais` | País. |
+| `regiao` | Região, NUTS ou outra divisão territorial. |
+| `municipio` | Município, quando aplicável. |
+| `indicador` | Nome do indicador. |
+| `valor` | Valor observado. |
+| `unidade` | Unidade de medida. |
+| `categoria` | Categoria principal. |
+| `subcategoria` | Subcategoria, quando aplicável. |
+| `data_atualizacao` | Data de atualização ou acesso ao dado. |
 
-| Item | Padrão |
-|---|---|
-| Encoding | UTF-8 |
-| Separador | Ponto e vírgula (`;`) |
-| Cabeçalho | Obrigatório |
-| Nome de campos | `snake_case` |
-| Datas | `YYYY-MM-DD` |
-| Decimal | Ponto (`.`), salvo exigência contrária da fonte |
-| Valores ausentes | Campo vazio ou `null`, conforme decisão do dataset |
+## Regras para arquivos pesados
 
-## 10. Critério de Aceite
+Se o arquivo for grande demais para versionamento simples no GitHub:
 
-Um CSV só será aceito quando:
+1. não fazer commit direto sem avisar;
+2. registrar a fonte e o link de download;
+3. documentar o motivo no README do dataset;
+4. avaliar compressão ou recorte mínimo útil;
+5. pedir validação do líder antes de subir.
 
-- estiver na pasta correta;
-- seguir o padrão de nome definido;
-- possuir cabeçalho;
-- possuir `fonte_id` documentado;
-- tiver origem registrada no catálogo de fontes;
-- indicar período e cobertura geográfica;
-- estiver legível em UTF-8;
-- tiver separador padronizado;
-- não apresentar colunas sem explicação no dicionário de dados, quando for arquivo `processed` ou `validated`.
+## Regras para substituição de arquivos
+
+Não substituir arquivo validado sem registrar motivo.
+
+Se for necessário substituir:
+
+1. abrir uma task com ID;
+2. explicar o motivo;
+3. manter registro no Pull Request;
+4. atualizar dicionário de dados, se houver mudança de colunas;
+5. atualizar checklist de validação.
+
+## Regra de fonte
+
+Todo CSV deve ter `fonte_id` associado em:
+
+```txt
+metadata/catalogo_fontes.csv
+```
+
+## Regra de dicionário
+
+Todo CSV validado deve ter colunas documentadas em:
+
+```txt
+metadata/dicionario_dados.csv
+```

@@ -1,1 +1,2 @@
-fonte_id;tema;nome_dataset;origem;entidade_responsavel;url_fonte;data_acesso;periodo_coberto;cobertura_geografica;formato_original;licenca_uso;status_validacao;responsavel_coleta;observacoes
+fonte_id;nome_fonte;instituicao;url;tema;pais;periodo_disponivel;data_acesso;tipo_fonte;confiabilidade;observacoes
+FONTE-001;Fonte de exemplo;Instituicao de exemplo;https://exemplo.org;Tema de exemplo;Portugal;2020-2024;2026-05-17;Base estatistica;Alta;Linha ficticia para orientar preenchimento
