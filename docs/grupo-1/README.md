@@ -11,6 +11,25 @@ Este diretório reúne a documentação operacional do Grupo 1 — Tratamento e 
 | [catalogo-fontes.md](catalogo-fontes.md) | Como registrar fontes públicas e avaliar confiabilidade. |
 | [dicionario-dados.md](dicionario-dados.md) | Como documentar colunas, tipos, unidades e observações dos datasets. |
 | [checklist-validacao.md](checklist-validacao.md) | Checklist mínimo antes de concluir uma entrega. |
+| [extrato-conversas-whatsapp.md](extrato-conversas-whatsapp.md) | Decisões, ações, riscos e prazos extraídos das conversas do estágio. |
+| [matriz-viabilidade-g1-001.md](matriz-viabilidade-g1-001.md) | Matriz preliminar para validar fontes por pergunta do Grupo 3. |
+
+## Status atual
+
+O grupo está na execução da task **G1-001 — Validar viabilidade preliminar de dados das perguntas do Grupo 3**.
+
+Tema atual: **Imigração e Economia**.
+
+Registro oficial de contexto:
+
+- [Extrato das conversas do WhatsApp](extrato-conversas-whatsapp.md)
+- [Matriz preliminar de viabilidade — G1-001](matriz-viabilidade-g1-001.md)
+- [Issue principal G1-001](https://github.com/equipe-tratadados/tratamento-validacao-dados/issues/5)
+
+Prazos operacionais:
+
+- entregas individuais nas issues: **26/05/2026 18:00 Europe/Lisbon**;
+- consolidação da matriz: **26/05/2026 23:59 Europe/Lisbon**.
 
 ## Regra central
 
