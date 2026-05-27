@@ -16,7 +16,7 @@ Este diretório reúne a documentação operacional do Grupo 1 — Tratamento e 
 
 ## Status atual
 
-O grupo está na execução da task **G1-001 — Validar viabilidade preliminar de dados das perguntas do Grupo 3**.
+O grupo concluiu a validação preliminar da **G1-001 — Validar viabilidade preliminar de dados das perguntas do Grupo 3** e está na fase de transformar a validação em documentação operacional reutilizável.
 
 Tema atual: **Imigração e Economia**.
 
@@ -25,11 +25,19 @@ Registro oficial de contexto:
 - [Extrato das conversas do WhatsApp](extrato-conversas-whatsapp.md)
 - [Matriz preliminar de viabilidade — G1-001](matriz-viabilidade-g1-001.md)
 - [Issue principal G1-001](https://github.com/equipe-tratadados/tratamento-validacao-dados/issues/5)
+- [Pull Request G1-002](https://github.com/equipe-tratadados/tratamento-validacao-dados/pull/13)
+- [Pull Request G1-003](https://github.com/equipe-tratadados/tratamento-validacao-dados/pull/15)
 
-Prazos operacionais:
+Andamento operacional:
 
-- entregas individuais nas issues: **26/05/2026 18:00 Europe/Lisbon**;
-- consolidação da matriz: **26/05/2026 23:59 Europe/Lisbon**.
+| Task | Estado | Entrega |
+| --- | --- | --- |
+| G1-001 | Concluída | Validação preliminar das perguntas do Grupo 3. |
+| G1-002 | Concluída | Matriz oficial de viabilidade atualizada no repositório. |
+| G1-003 | Concluída | Catálogo oficial de fontes atualizado com fontes reais. |
+| G1-004 | Ready | Atualizar status operacional da documentação do Grupo 1. |
+| G1-005 | Ready / In Progress | Confirmar compatibilidade CSV com Grupo 2 e publicar Dicionário de Dados. |
+| G1-006 | Backlog | Selecionar datasets prioritários para coleta inicial. |
 
 ## Regra central
 

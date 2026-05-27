@@ -6,7 +6,17 @@ O dicionário de dados documenta as colunas dos datasets usados e produzidos pel
 
 Ele permite que os Grupos 2 e 3 entendam o significado, tipo, unidade e limitações de cada campo sem depender de explicações informais.
 
-## Arquivo principal
+## Documento normativo
+
+O padrão completo de entrega dos CSVs está publicado na raiz do repositório:
+
+```txt
+DICIONARIO_DE_DADOS.md
+```
+
+Esse documento define encoding, separador, decimal, datas, nulos, cabeçalhos, campos mínimos e template de log de coleta.
+
+## Arquivo operacional
 
 O dicionário em CSV fica em:
 
@@ -46,26 +56,29 @@ Para cada CSV validado:
 
 ```csv
 dataset_id;arquivo;coluna;tipo_dado;descricao;unidade;obrigatorio;exemplo;observacoes
-DATASET-001;inflacao_ine_2020_2024_validated.csv;ano;inteiro;Ano de referência do indicador;ano;Sim;2024;Exemplo de preenchimento
+DATASET-001;residents_by_nationality_validated.csv;year;inteiro;Ano de referência do indicador;ano;Sim;2024;Exemplo documental
 ```
+
+O exemplo acima não deve permanecer em `metadata/dicionario_dados.csv`. Enquanto não houver datasets reais validados, o arquivo operacional deve manter apenas o cabeçalho.
 
 ## Campos mínimos recomendados para datasets
 
 | Campo | Descrição |
 | --- | --- |
-| `id_registro` | Identificador único da linha. |
-| `fonte_id` | ID da fonte no catálogo. |
-| `ano` | Ano de referência. |
-| `periodo` | Período de referência. |
-| `pais` | País. |
-| `regiao` | Região. |
-| `municipio` | Município. |
-| `indicador` | Indicador analisado. |
-| `valor` | Valor observado. |
-| `unidade` | Unidade de medida. |
-| `categoria` | Categoria principal. |
-| `subcategoria` | Subcategoria. |
-| `data_atualizacao` | Data de acesso ou atualização. |
+| `record_id` | Identificador único da linha. |
+| `source_id` | ID da fonte no catálogo. |
+| `year` | Ano de referência. |
+| `period` | Período de referência. |
+| `date` | Data em `YYYY-MM-DD`, quando aplicável. |
+| `country` | País. |
+| `region` | Região. |
+| `municipality` | Município. |
+| `indicator` | Indicador analisado. |
+| `value` | Valor observado. |
+| `unit` | Unidade de medida. |
+| `category` | Categoria principal. |
+| `subcategory` | Subcategoria. |
+| `updated_at` | Data de acesso ou atualização. |
 
 ## Regra de validação
 
