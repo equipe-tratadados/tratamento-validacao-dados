@@ -1,4 +1,4 @@
-z# Matriz Preliminar de Viabilidade — G1-001
+# Matriz Preliminar de Viabilidade — G1-001
 
 ## 1. Objetivo
 
