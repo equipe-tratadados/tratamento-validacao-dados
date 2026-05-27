@@ -9,6 +9,7 @@ Este diretório reúne a documentação operacional do Grupo 1 — Tratamento e 
 | [processo-interno.md](processo-interno.md) | Fluxo de trabalho, papéis, GitHub Projects, branches, commits, PRs, prioridades e Definition of Done. |
 | [padrao-csv.md](padrao-csv.md) | Regras para organização, nomeação, encoding e validação de arquivos CSV. |
 | [catalogo-fontes.md](catalogo-fontes.md) | Como registrar fontes públicas e avaliar confiabilidade. |
+| [log-fontes.md](log-fontes.md) | Log central para entregas diretas de fontes via Pull Request. |
 | [dicionario-dados.md](dicionario-dados.md) | Como documentar colunas, tipos, unidades e observações dos datasets. |
 | [checklist-validacao.md](checklist-validacao.md) | Checklist mínimo antes de concluir uma entrega. |
 | [extrato-conversas-whatsapp.md](extrato-conversas-whatsapp.md) | Decisões, ações, riscos e prazos extraídos das conversas do estágio. |
@@ -64,7 +65,8 @@ fonte pública → data/raw → data/processed → data/validated → entrega pa
 | Dados brutos | `data/raw/` |
 | Dados tratados | `data/processed/` |
 | Dados validados | `data/validated/` |
-| Fontes | `metadata/catalogo_fontes.csv` |
+| Entregas de fontes candidatas | `docs/grupo-1/log-fontes.md` |
+| Fontes aceitas no catálogo oficial | `metadata/catalogo_fontes.csv` |
 | Dicionário de dados | `metadata/dicionario_dados.csv` |
 | Entrega final | `reports/entregas/` |
 | Regras do processo | `docs/grupo-1/` |
