@@ -14,10 +14,11 @@ Este diretório reúne a documentação operacional do Grupo 1 — Tratamento e 
 | [checklist-validacao.md](checklist-validacao.md) | Checklist mínimo antes de concluir uma entrega. |
 | [extrato-conversas-whatsapp.md](extrato-conversas-whatsapp.md) | Decisões, ações, riscos e prazos extraídos das conversas do estágio. |
 | [matriz-viabilidade-g1-001.md](matriz-viabilidade-g1-001.md) | Matriz preliminar para validar fontes por pergunta do Grupo 3. |
+| [datasets-prioritarios-g1-006.md](datasets-prioritarios-g1-006.md) | Seleção oficial dos datasets prioritários para a primeira coleta real da Sprint 1. |
 
 ## Status atual
 
-O grupo concluiu a validação preliminar da **G1-001 — Validar viabilidade preliminar de dados das perguntas do Grupo 3** e está na fase de transformar a validação em documentação operacional reutilizável.
+O grupo concluiu a validação preliminar da **G1-001 — Validar viabilidade preliminar de dados das perguntas do Grupo 3**, atualizou a matriz oficial, publicou o catálogo de fontes reais e definiu o padrão CSV/Dicionário de Dados.
 
 Tema atual: **Imigração e Economia**.
 
@@ -36,9 +37,10 @@ Andamento operacional:
 | G1-001 | Concluída | Validação preliminar das perguntas do Grupo 3. |
 | G1-002 | Concluída | Matriz oficial de viabilidade atualizada no repositório. |
 | G1-003 | Concluída | Catálogo oficial de fontes atualizado com fontes reais. |
-| G1-004 | Ready | Atualizar status operacional da documentação do Grupo 1. |
-| G1-005 | Ready / In Progress | Confirmar compatibilidade CSV com Grupo 2 e publicar Dicionário de Dados. |
-| G1-006 | Backlog | Selecionar datasets prioritários para coleta inicial. |
+| G1-004 | Concluída | Status operacional da documentação do Grupo 1 atualizado. |
+| G1-005 | Concluída | Compatibilidade CSV e Dicionário de Dados publicados. |
+| G1-006 | Review | Datasets prioritários selecionados para a primeira coleta real. |
+| G1-007 | Próxima | Coletar o primeiro dataset bruto aprovado. |
 
 ## Regra central
 
