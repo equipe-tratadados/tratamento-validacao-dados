@@ -4,6 +4,12 @@ Este documento registra a configuração final do GitHub Projects usada pelo Gru
 
 O objetivo é manter o quadro operacional como fonte de verdade para execução, revisão e entrega das tasks do Grupo 1.
 
+Para instruções passo a passo de uso do Project por iniciantes, consulte:
+
+```txt
+docs/grupo-1/guia-operacional-iniciantes.md
+```
+
 ## Estado atual
 
 O GitHub Projects foi configurado como quadro operacional do Grupo 1.

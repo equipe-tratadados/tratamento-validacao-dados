@@ -6,6 +6,7 @@ Este diretório reúne a documentação operacional do Grupo 1 — Tratamento e 
 
 | Documento | Finalidade |
 | --- | --- |
+| [guia-operacional-iniciantes.md](guia-operacional-iniciantes.md) | Passo a passo para iniciantes usarem GitHub, GitHub Projects, issues, branches, commits e Pull Requests no projeto. |
 | [processo-interno.md](processo-interno.md) | Fluxo de trabalho, papéis, GitHub Projects, branches, commits, PRs, prioridades e Definition of Done. |
 | [padrao-csv.md](padrao-csv.md) | Regras para organização, nomeação, encoding e validação de arquivos CSV. |
 | [catalogo-fontes.md](catalogo-fontes.md) | Como registrar fontes públicas e avaliar confiabilidade. |
@@ -72,3 +73,7 @@ fonte pública → data/raw → data/processed → data/validated → entrega pa
 | Dicionário de dados | `metadata/dicionario_dados.csv` |
 | Entrega final | `reports/entregas/` |
 | Regras do processo | `docs/grupo-1/` |
+
+## Para quem está começando
+
+Antes de assumir uma task, leia o [guia operacional para iniciantes](guia-operacional-iniciantes.md) e copie o checklist de execução em `templates/checklist-execucao-task.template.md`.

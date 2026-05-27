@@ -10,6 +10,13 @@ labels: tratamento, dados
 
 Tratamento de dados.
 
+Se estiver perdido sobre como executar esta tarefa, siga:
+
+```txt
+docs/grupo-1/guia-operacional-iniciantes.md
+templates/checklist-execucao-task.template.md
+```
+
 ## Dataset de entrada
 
 | Campo | Valor |

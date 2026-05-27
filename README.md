@@ -116,6 +116,16 @@ A documentação operacional está em:
 
 [docs/grupo-1/README.md](docs/grupo-1/README.md)
 
+## Novo no projeto? Comece aqui
+
+Se você ainda não sabe como usar GitHub, GitHub Projects, issues, branches, commits e Pull Requests neste projeto, siga o guia:
+
+[docs/grupo-1/guia-operacional-iniciantes.md](docs/grupo-1/guia-operacional-iniciantes.md)
+
+Checklist copiável para executar qualquer task:
+
+[templates/checklist-execucao-task.template.md](templates/checklist-execucao-task.template.md)
+
 ## Padrão de CSV
 
 Os CSVs devem seguir o contrato oficial em [DICIONARIO_DE_DADOS.md](DICIONARIO_DE_DADOS.md):
