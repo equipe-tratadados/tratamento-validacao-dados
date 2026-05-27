@@ -6,6 +6,12 @@ Definir o padrão mínimo para arquivos CSV produzidos pelo Grupo 1.
 
 O objetivo é garantir que os dados possam ser usados pelos Grupos 2 e 3 sem retrabalho básico de encoding, separador, nomeação, fonte ou dicionário de dados.
 
+O contrato completo de entrega está publicado na raiz do repositório:
+
+```txt
+DICIONARIO_DE_DADOS.md
+```
+
 ## Estrutura das pastas de dados
 
 | Pasta | Uso |
@@ -20,21 +26,19 @@ O objetivo é garantir que os dados possam ser usados pelos Grupos 2 e 3 sem ret
 fonte pública → data/raw → data/processed → data/validated
 ```
 
-## Encoding
+## Formato oficial
 
-Todos os CSVs devem usar:
+Todos os CSVs devem seguir o padrão abaixo.
 
-```txt
-UTF-8
-```
-
-## Separador
-
-Todos os CSVs devem usar ponto e vírgula:
-
-```txt
-;
-```
+| Parâmetro | Valor |
+| --- | --- |
+| Encoding | UTF-8 sem BOM |
+| Separador | Ponto e vírgula `;` |
+| Decimal | Ponto `.` |
+| Separador de milhar | Não usar |
+| Data | `YYYY-MM-DD` |
+| Nulos | Célula vazia |
+| Cabeçalhos | `snake_case`, em inglês, sem acentos e sem espaços |
 
 ## Nome de arquivo
 
@@ -79,19 +83,20 @@ Sempre que fizer sentido para o dataset, usar os seguintes campos:
 
 | Campo | Descrição |
 | --- | --- |
-| `id_registro` | Identificador único da linha. |
-| `fonte_id` | ID da fonte registrada no catálogo de fontes. |
-| `ano` | Ano de referência. |
-| `periodo` | Período de referência, quando aplicável. |
-| `pais` | País. |
-| `regiao` | Região, NUTS ou outra divisão territorial. |
-| `municipio` | Município, quando aplicável. |
-| `indicador` | Nome do indicador. |
-| `valor` | Valor observado. |
-| `unidade` | Unidade de medida. |
-| `categoria` | Categoria principal. |
-| `subcategoria` | Subcategoria, quando aplicável. |
-| `data_atualizacao` | Data de atualização ou acesso ao dado. |
+| `record_id` | Identificador único da linha. |
+| `source_id` | ID da fonte registrada no catálogo de fontes. |
+| `year` | Ano de referência. |
+| `period` | Período de referência, quando aplicável. |
+| `date` | Data em `YYYY-MM-DD`, quando aplicável. |
+| `country` | País. |
+| `region` | Região, NUTS ou outra divisão territorial. |
+| `municipality` | Município, quando aplicável. |
+| `indicator` | Nome do indicador. |
+| `value` | Valor observado. |
+| `unit` | Unidade de medida. |
+| `category` | Categoria principal. |
+| `subcategory` | Subcategoria, quando aplicável. |
+| `updated_at` | Data de atualização ou acesso ao dado. |
 
 ## Regras para arquivos pesados
 
@@ -117,7 +122,7 @@ Se for necessário substituir:
 
 ## Regra de fonte
 
-Todo CSV deve ter `fonte_id` associado em:
+Todo CSV deve ter `source_id` associado a um `fonte_id` existente em:
 
 ```txt
 metadata/catalogo_fontes.csv

@@ -20,6 +20,7 @@ Centralizar:
 ```txt
 tratamento-validacao-dados/
 ├── README.md
+├── DICIONARIO_DE_DADOS.md
 ├── .github/
 │   ├── PULL_REQUEST_TEMPLATE.md
 │   └── ISSUE_TEMPLATE/
@@ -65,6 +66,7 @@ Grupo 2 / Grupo 3
 | `data/processed/` | Dados tratados, limpos e padronizados. |
 | `data/validated/` | Dados revisados e prontos para uso pelos outros grupos. |
 | `docs/grupo-1/` | Documentação operacional do Grupo 1. |
+| `DICIONARIO_DE_DADOS.md` | Padrão oficial de entrega dos CSVs. |
 | `metadata/` | Catálogo de fontes e dicionário de dados em CSV. |
 | `.github/ISSUE_TEMPLATE/` | Modelos de tarefas reconhecidos pelo GitHub. |
 | `.github/PULL_REQUEST_TEMPLATE.md` | Modelo padrão para Pull Requests. |
@@ -116,11 +118,13 @@ A documentação operacional está em:
 
 ## Padrão de CSV
 
-Os CSVs devem seguir:
+Os CSVs devem seguir o contrato oficial em [DICIONARIO_DE_DADOS.md](DICIONARIO_DE_DADOS.md):
 
-- encoding UTF-8;
+- encoding UTF-8 sem BOM;
 - separador ponto e vírgula `;`;
-- nomes sem espaços;
+- decimal com ponto `.`;
+- datas em `YYYY-MM-DD`;
+- cabeçalhos em `snake_case`, em inglês, sem acentos e sem espaços;
 - fonte registrada em `metadata/catalogo_fontes.csv`;
 - dicionário atualizado em `metadata/dicionario_dados.csv`, quando aplicável.
 

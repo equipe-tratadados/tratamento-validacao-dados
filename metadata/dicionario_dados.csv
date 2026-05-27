@@ -1,2 +1,1 @@
 dataset_id;arquivo;coluna;tipo_dado;descricao;unidade;obrigatorio;exemplo;observacoes
-DATASET-001;dataset_exemplo_validated.csv;ano;inteiro;Ano de referencia do indicador;ano;Sim;2024;Linha ficticia para orientar preenchimento

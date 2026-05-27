@@ -2,15 +2,13 @@
 
 Este documento registra a configuração final do GitHub Projects usada pelo Grupo 1 — Tratamento e Validação de Dados.
 
-O objetivo é deixar o ambiente pronto para iniciar a execução quando o tema base do projeto for definido, evitando que os membros do grupo precisem descobrir o fluxo do GitHub e do GitHub Projects durante a sprint.
+O objetivo é manter o quadro operacional como fonte de verdade para execução, revisão e entrega das tasks do Grupo 1.
 
 ## Estado atual
 
 O GitHub Projects foi configurado como quadro operacional do Grupo 1.
 
-No momento, ainda não devem ser criadas as tasks de execução `G1-001` até `G1-007`, porque o tema base do projeto ainda não foi formalmente definido.
-
-A configuração atual serve como preparação estrutural.
+O tema base do projeto está definido como **Imigração e Economia**. As tasks `G1-001`, `G1-002` e `G1-003` já foram executadas e devem constar como `Done` no Project. As próximas tasks operacionais são `G1-004`, `G1-005` e `G1-006`.
 
 ## Quando criar novas tasks
 
@@ -22,7 +20,7 @@ Novas tasks devem ser criadas quando pelo menos uma das condições abaixo estiv
 - houver decisão da liderança geral;
 - houver necessidade interna de documentação, organização ou correção do repositório.
 
-Enquanto o tema não estiver definido, o Project deve permanecer preparado, mas sem backlog artificial de coleta, tratamento ou validação.
+Depois da definição do tema, toda nova demanda deve entrar no Project com ID de task, prioridade, status e entrega esperada.
 
 ## Views configuradas
 
@@ -201,38 +199,36 @@ Uma task só pode ir para `Done` quando cumprir os pontos aplicáveis:
 - revisão concluída;
 - merge feito na `main`.
 
-## Uso esperado quando o tema for definido
+## Sequência operacional atual
 
-Após a definição do tema base, o PO deve criar as primeiras tasks reais no Project seguindo esta ordem:
+Após a conclusão da G1-001, o PO deve manter o Project nesta ordem:
 
-1. mapear fontes oficiais do tema;
-2. criar ou atualizar catálogo de fontes;
-3. definir datasets prioritários;
+1. concluir documentação operacional pós-G1-001;
+2. confirmar o padrão final de CSV com o Grupo 2;
+3. selecionar datasets prioritários para coleta inicial;
 4. criar tasks de coleta;
 5. criar tasks de tratamento;
 6. criar tasks de validação;
 7. registrar entrega para Grupo 2 e Grupo 3.
 
-## Modelo inicial de task após definição do tema
+## Modelo de task operacional
 
 ```txt
-[G1-001] Mapear fontes oficiais para [tema definido]
+[G1-006] Selecionar datasets prioritários para coleta inicial
 ```
 
 Campos recomendados:
 
 | Campo | Valor |
 | --- | --- |
-| Status | Ready |
-| Tipo | Coleta |
+| Status | Backlog |
+| Tipo | Documentação |
 | Prioridade | P0 |
-| Fonte | A definir |
+| Fonte | Múltiplas |
 | Sprint | Sprint 01 |
-| Entrega esperada | Lista de fontes oficiais com links, período disponível e limitações |
-| Grupo destino | Interno G1 |
+| Entrega esperada | Lista de 2 ou 3 datasets prioritários com fonte, período, formato, limitação e grupo destino |
+| Grupo destino | Ambos |
 
 ## Regra final
 
-Enquanto o tema base não estiver definido, o GitHub Projects deve ficar configurado e pronto, mas sem criação de tarefas fictícias de coleta, tratamento ou validação.
-
-Quando o tema for definido, toda execução deve começar pelo Project, passar por Issue, branch, commit, Pull Request, revisão e merge.
+Toda execução deve começar pelo Project, passar por Issue, branch, commit, Pull Request, revisão e merge.
