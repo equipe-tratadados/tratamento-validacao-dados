@@ -6,6 +6,18 @@ Definir o fluxo operacional do Grupo 1 para coleta, tratamento, validação e do
 
 Este processo deve ser seguido por todos os membros do grupo para manter rastreabilidade, reduzir retrabalho e permitir que os Grupos 2 e 3 utilizem os dados sem depender de explicações informais.
 
+Para o passo a passo detalhado de execução, use o guia:
+
+```txt
+docs/grupo-1/guia-operacional-iniciantes.md
+```
+
+Checklist copiável para qualquer task:
+
+```txt
+templates/checklist-execucao-task.template.md
+```
+
 ## Papéis do Grupo 1
 
 | Papel | Responsabilidade |

@@ -1,5 +1,12 @@
 # Pull Request
 
+Se estiver em dúvida sobre como preencher este PR, siga:
+
+```txt
+docs/grupo-1/guia-operacional-iniciantes.md
+templates/checklist-execucao-task.template.md
+```
+
 ## ID da task
 
 ```txt
