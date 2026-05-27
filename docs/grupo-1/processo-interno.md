@@ -28,6 +28,19 @@ Este processo deve ser seguido por todos os membros do grupo para manter rastrea
 8. Fazer merge na `main`.
 9. Registrar entrega em `reports/entregas/`.
 
+## Entrega direta de fontes
+
+Para reduzir retrabalho de consolidação, a entrega de fontes deve ser feita diretamente no GitHub:
+
+1. o responsável abre uma branch com o ID da task;
+2. copia o modelo de `templates/registro-fonte.template.md`;
+3. cola uma nova entrada no fim de `docs/grupo-1/log-fontes.md`;
+4. preenche todos os campos obrigatórios da fonte;
+5. se a fonte for candidata a oficial, atualiza também `metadata/catalogo_fontes.csv`;
+6. abre Pull Request para revisão.
+
+O líder deve revisar o PR e solicitar ajustes no próprio PR, em vez de copiar a entrega manualmente para outro documento.
+
 ## GitHub Projects
 
 ### Colunas obrigatórias
@@ -182,6 +195,7 @@ fonte pública → data/raw → data/processed → data/validated → entrega pa
 Uma task só pode ir para `Done` quando cumprir todos os pontos aplicáveis:
 
 - fonte documentada;
+- fonte registrada em `docs/grupo-1/log-fontes.md`, quando aplicável;
 - link da fonte informado;
 - data de acesso registrada;
 - período dos dados identificado;
@@ -189,6 +203,7 @@ Uma task só pode ir para `Done` quando cumprir todos os pontos aplicáveis:
 - encoding UTF-8;
 - separador ponto e vírgula;
 - dicionário de dados atualizado, quando aplicável;
+- catálogo de fontes atualizado, quando a fonte for aceita como oficial;
 - checklist de validação preenchido;
 - commit no padrão definido;
 - Pull Request aberto;

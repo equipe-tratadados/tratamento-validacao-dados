@@ -14,6 +14,22 @@ O catálogo em CSV fica em:
 metadata/catalogo_fontes.csv
 ```
 
+## Log de entrega direta
+
+Antes de virar catálogo oficial, uma fonte pode ser entregue e revisada em:
+
+```txt
+docs/grupo-1/log-fontes.md
+```
+
+O responsável deve copiar o modelo de:
+
+```txt
+templates/registro-fonte.template.md
+```
+
+Depois deve abrir um Pull Request. Se a fonte for aceita como oficial ou candidata forte para coleta, o mesmo PR deve adicionar ou atualizar a linha correspondente em `metadata/catalogo_fontes.csv`.
+
 ## Campos obrigatórios
 
 | Campo | Descrição |
@@ -33,12 +49,14 @@ metadata/catalogo_fontes.csv
 ## Como registrar uma nova fonte
 
 1. Verificar se a fonte já existe em `metadata/catalogo_fontes.csv`.
-2. Criar novo `fonte_id`, seguindo a sequência existente.
-3. Registrar nome, instituição, URL, tema e período disponível.
-4. Informar data de acesso.
-5. Classificar confiabilidade.
-6. Indicar limitações ou observações.
-7. Usar o `fonte_id` nos datasets relacionados.
+2. Registrar a fonte em `docs/grupo-1/log-fontes.md`.
+3. Criar novo `fonte_id`, seguindo a sequência existente.
+4. Registrar nome, instituição, URL, tema e período disponível.
+5. Informar data de acesso.
+6. Classificar confiabilidade.
+7. Indicar limitações ou observações.
+8. Abrir PR para revisão.
+9. Usar o `fonte_id` nos datasets relacionados depois da fonte ser aceita.
 
 ## Critérios de confiabilidade
 

@@ -34,6 +34,26 @@ Exemplo: Coletar dados de inflação em Portugal no período 2020-2024.
 Exemplo: CSV bruto salvo em data/raw/ e fonte registrada em metadata/catalogo_fontes.csv.
 ```
 
+## Registro obrigatório da fonte
+
+Antes de concluir a coleta, registrar a fonte em:
+
+```txt
+docs/grupo-1/log-fontes.md
+```
+
+Use o modelo:
+
+```txt
+templates/registro-fonte.template.md
+```
+
+Se a fonte for candidata a oficial, atualizar também:
+
+```txt
+metadata/catalogo_fontes.csv
+```
+
 ## Prioridade
 
 Marcar uma opção:
@@ -90,6 +110,7 @@ data(ine): adiciona base bruta de inflacao [G1-001]
 - [ ] Período dos dados identificado.
 - [ ] Arquivo salvo em `data/raw/`.
 - [ ] Nome do arquivo segue o padrão definido.
+- [ ] Entrada registrada em `docs/grupo-1/log-fontes.md`.
 - [ ] Fonte registrada em `metadata/catalogo_fontes.csv`.
 - [ ] Commit segue o padrão definido.
 - [ ] Pull Request aberto com ID da task.
