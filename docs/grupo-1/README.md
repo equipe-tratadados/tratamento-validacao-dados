@@ -9,6 +9,7 @@ Este diretório reúne a documentação operacional do Grupo 1 — Tratamento e 
 | [guia-operacional-iniciantes.md](guia-operacional-iniciantes.md) | Passo a passo para iniciantes usarem GitHub, GitHub Projects, issues, branches, commits e Pull Requests no projeto. |
 | [processo-interno.md](processo-interno.md) | Fluxo de trabalho, papéis, GitHub Projects, branches, commits, PRs, prioridades e Definition of Done. |
 | [padrao-csv.md](padrao-csv.md) | Regras para organização, nomeação, encoding e validação de arquivos CSV. |
+| [biblioteca-fontes.md](biblioteca-fontes.md) | Inventário amplo de fontes públicas relevantes para o projeto. |
 | [catalogo-fontes.md](catalogo-fontes.md) | Como registrar fontes públicas e avaliar confiabilidade. |
 | [log-fontes.md](log-fontes.md) | Log central para entregas diretas de fontes via Pull Request. |
 | [dicionario-dados.md](dicionario-dados.md) | Como documentar colunas, tipos, unidades e observações dos datasets. |
