@@ -14,6 +14,19 @@ O catálogo em CSV fica em:
 metadata/catalogo_fontes.csv
 ```
 
+## Relação com a biblioteca de fontes
+
+A biblioteca de fontes e o catálogo oficial têm funções diferentes:
+
+| Arquivo | Função |
+| --- | --- |
+| `docs/grupo-1/biblioteca-fontes.md` | Inventário amplo em Markdown, criado para leitura humana e revisão da task de biblioteca de fontes. |
+| `metadata/biblioteca_fontes.csv` | Versão CSV da biblioteca, com a nomenclatura solicitada na task original. |
+| `docs/grupo-1/catalogo-fontes.md` | Documentação do catálogo oficial. |
+| `metadata/catalogo_fontes.csv` | Catálogo oficial usado pelos datasets e pelo campo `source_id`. |
+
+Não renomear `metadata/catalogo_fontes.csv` para `metadata/biblioteca_fontes.csv`. O primeiro continua sendo o catálogo oficial do processo interno; o segundo é um artefato complementar da biblioteca.
+
 ## Log de entrega direta
 
 Antes de virar catálogo oficial, uma fonte pode ser entregue e revisada em:
